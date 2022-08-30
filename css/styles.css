@@ -39,7 +39,7 @@ p {
 
 .form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: column; }
 
@@ -50,6 +50,10 @@ p {
   border: 2px solid #183e69;
   border-radius: 5px;
   width: 15rem; }
+
+.form label {
+  padding-bottom: 0.3rem;
+  font-size: 14px; }
 
 .form button {
   padding: 0.8rem;

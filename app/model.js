@@ -1,5 +1,5 @@
 const key = "1deae9b5388e4706b35202240222908";
-const baseURL = "http://api.weatherapi.com/v1/";
+const baseURL = "https://api.weatherapi.com/v1/";
 
 function getCurrentDate() {
   return new Date().toISOString().split("T")[0];
@@ -14,6 +14,7 @@ function getCurrentWeather(location, days) {
     }
   )
     .done((data) => {
+      console.log(data);
       $(".location").html("<h1 class='info-header'>Location:</h1>");
       $(".current").html("<h1 class='info-header'>Weather:</h1>");
       $(".forecast").html("<h1 class='info-header'>Forecast:</h1>");
@@ -40,7 +41,7 @@ function getCurrentWeather(location, days) {
     <p class="info">Pressure IN: ${data.current.pressure_in}</p>
     <p class="info">Precipitation MM: ${data.current.precip_mm}</p>
     <p class="info">Precipitation IN: ${data.current.precip_in}</p>
-    <p class="info">Humidity: ${data.current.humidity}</p> <p class="info">Cloud: ${data.current.cloud}</p>
+    <p class="info">Humidity: ${data.current.humidity}%</p> <p class="info">Cloud: ${data.current.cloud}%</p>
     <p class="info">C. Feels Like: ${data.current.feelslike_c}</p>
     <p class="info">F. Feels Like: ${data.current.feelslike_f}</p>
     <p class="info">Wind Direction: ${data.current.wind_dir}</p>
