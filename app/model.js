@@ -45,8 +45,8 @@ function getCurrentWeather(location, days) {
     <p class="info">Feels Like: ${data.current.feelslike_c}&#176;C</p>
     <p class="info">Feels Like: ${data.current.feelslike_f}&#176;F</p>
     <p class="info">Wind Direction: ${data.current.wind_dir}</p>
-    <p class="info">Vision KM: ${data.current.vis_km}</p>
-    <p class="info">Vision Miles: ${data.current.vis_miles}</p>
+    <p class="info">Visibility KM: ${data.current.vis_km}</p>
+    <p class="info">Visibility Miles: ${data.current.vis_miles}</p>
     <p class="info">UV Index: ${data.current.uv}</p>
     <p class="info">Gust MPH: ${data.current.gust_mph}</p>
     <p class="info">Gust KPH: ${data.current.gust_kph}</p>`);
