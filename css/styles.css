@@ -49,7 +49,8 @@ p {
   font-family: "Poppins", sans-serif;
   border: 2px solid #183e69;
   border-radius: 5px;
-  width: 15rem; }
+  width: 15rem;
+  transition: all 0.2s ease; }
 
 .form label {
   padding-bottom: 0.3rem;
@@ -71,6 +72,13 @@ p {
 .form button:hover {
   color: white;
   background-color: #183e69; }
+
+.form input:focus {
+  transform: scale(1.05);
+  outline: none; }
+
+.form button:active {
+  transform: scale(0.95); }
 
 nav {
   display: flex;
