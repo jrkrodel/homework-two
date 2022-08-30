@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's my Weather?</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="#">Login</a>
+      <a href="#">Signup</a>
+    </nav>
+    <div id="app">
+      <h1>What's My Weather?</h1>
+      <div class="form">
+        <input id="gwInput" type="number" placeholder="Enter your ZIP code" />
+        <input
+          id="numOfDays"
+          max="14"
+          min="0"
+          type="number"
+          placeholder="Number of days to forecast"
+        />
+        <button id="gw">Get My Weather</button>
+      </div>
+      <div class="icon"></div>
+      <div id="weather">
+        <div class="location"></div>
+        <div class="current"></div>
+        <div class="forecast"></div>
+      </div>
+    </div>
+    <script src="/lib/jquery-3.6.1.min.js"></script>
+    <script type="module" src="/app/model.js"></script>
+    <script type="module" src="/app/app.js"></script>
+  </body>
+</html>

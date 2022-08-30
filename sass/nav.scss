@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  border: 1px solid #183e69;
+  width: 100px;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 25px;
+  transition: ease all 0.5s;
+  text-decoration: none;
+  color: #183e69;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #183e69;
+}

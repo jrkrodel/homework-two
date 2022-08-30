@@ -1,0 +1,51 @@
+#app {
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icon {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.form input {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #183e69;
+  border-radius: 5px;
+  width: 15rem;
+}
+
+.form button {
+  padding: 0.8rem;
+  width: 15rem;
+  color: #183e69;
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  transition: ease all 0.5s;
+  border: 1px solid #183e69;
+  cursor: pointer;
+}
+
+.form button:hover {
+  color: white;
+  background-color: #183e69;
+}
