@@ -10,7 +10,6 @@ function getCurrentWeather(location, days) {
     `${baseURL}forecast.json?key=${key}&q=${location}&days=${days}&aqi=no&alerts=no
     `,
     () => {
-      console.log("Loading...");
       $(".icon").append("<p>Loading...</p>");
     }
   )
