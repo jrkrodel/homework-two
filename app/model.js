@@ -31,8 +31,8 @@ function getCurrentWeather(location, days) {
 
       $(".current")
         .append(`<p class="info">Updated: ${data.current.last_updated}</p>
-    <p class="info">Temp. C: ${data.current.temp_c}</p>
-    <p class="info">Temp. F: ${data.current.temp_f}</p>
+    <p class="info">Temp. C: ${data.current.temp_c}&#176;C</p>
+    <p class="info">Temp. F: ${data.current.temp_f}&#176;F</p>
     <p class="info">Wind MPH: ${data.current.wind_mph}</p>
     <p class="info">Wind KPH: ${data.current.wind_kph}</p>
     <p class="info">Degree of Wind: ${data.current.wind_degree}</p>
@@ -42,8 +42,8 @@ function getCurrentWeather(location, days) {
     <p class="info">Precipitation MM: ${data.current.precip_mm}</p>
     <p class="info">Precipitation IN: ${data.current.precip_in}</p>
     <p class="info">Humidity: ${data.current.humidity}%</p> <p class="info">Cloud: ${data.current.cloud}%</p>
-    <p class="info">C. Feels Like: ${data.current.feelslike_c}</p>
-    <p class="info">F. Feels Like: ${data.current.feelslike_f}</p>
+    <p class="info">Feels Like: ${data.current.feelslike_c}&#176;C</p>
+    <p class="info">Feels Like: ${data.current.feelslike_f}&#176;F</p>
     <p class="info">Wind Direction: ${data.current.wind_dir}</p>
     <p class="info">Vision KM: ${data.current.vis_km}</p>
     <p class="info">Vision Miles: ${data.current.vis_miles}</p>
