@@ -6,8 +6,11 @@ function getCurrentDate() {
 }
 
 function getCurrentWeather(location, days) {
+  console.log(days);
   $.get(
-    `${baseURL}forecast.json?key=${key}&q=${location}&days=${days}&aqi=no&alerts=no
+    `${baseURL}forecast.json?key=${key}&q=${location}&days=${
+      !days ? 3 : days
+    }&aqi=no&alerts=no
     `,
     () => {
       $(".icon").append("<p>Loading...</p>");
