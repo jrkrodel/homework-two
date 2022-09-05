@@ -6,7 +6,6 @@ function getCurrentDate() {
 }
 
 function getCurrentWeather(location, days) {
-  console.log(days);
   $.get(
     `${baseURL}forecast.json?key=${key}&q=${location}&days=${
       !days ? 3 : days
@@ -17,9 +16,9 @@ function getCurrentWeather(location, days) {
     }
   )
     .done((data) => {
-      console.log(data);
+      // console.log(data);
       $(".location").html("<h1 class='info-header'>Location:</h1>");
-      $(".current").html("<h1 class='info-header'>Weather:</h1>");
+      $(".current").html("<h1 class='info-header'>Current Weather:</h1>");
       $(".forecast").html("<h1 class='info-header'>Forecast:</h1>");
       $(".icon").html(
         `<p>Current Weather: ${data.current.condition.text}</p><img src="${data.current.condition.icon}">`
@@ -57,7 +56,19 @@ function getCurrentWeather(location, days) {
       for (let i = 0; i < data.forecast.forecastday.length; i++) {
         const date = data.forecast.forecastday[i].date;
         const description = data.forecast.forecastday[i].day.condition.text;
-        $(".forecast").append(`<p class="info">${date}: ${description}</p>`);
+        const temp = data.forecast.forecastday[i].day.avgtemp_f;
+        const minTemp = data.forecast.forecastday[i].day.mintemp_f;
+        const maxTemp = data.forecast.forecastday[i].day.maxtemp_f;
+        const icon = data.forecast.forecastday[i].day.condition.icon;
+        $(".forecast").append(
+          `<p class="info">${date}:</p>
+          <img src=${icon} />
+           <p class="info">Avg. Temp: ${temp}&#176;F</p>
+           <p class="info">Max. Temp: ${maxTemp}&#176;F</p>
+           <p class="info">Min. Temp: ${minTemp}&#176;F</p>
+          <p class="info">Conditions: ${description}</p>
+          <div class="line"></div>`
+        );
       }
     })
     .fail((e) => {
