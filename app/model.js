@@ -16,12 +16,12 @@ function getCurrentWeather(location, days) {
     }
   )
     .done((data) => {
-      // console.log(data);
+      console.log(data);
       $(".location").html("<h1 class='info-header'>Location:</h1>");
       $(".current").html("<h1 class='info-header'>Current Weather:</h1>");
       $(".forecast").html("<h1 class='info-header'>Forecast:</h1>");
       $(".icon").html(
-        `<p>Current Weather: ${data.current.condition.text}</p><img src="${data.current.condition.icon}">`
+        `<p>Current Weather: ${data.current.temp_f}&#176;F - ${data.current.condition.text}</p><img src="${data.current.condition.icon}">`
       );
       $(".location").append(`<p class="info">Name: ${data.location.name}</p>
     <p class="info">Region: ${data.location.region}</p>
